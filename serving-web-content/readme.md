@@ -440,3 +440,77 @@ For this example we'll be using a package that provides a stream of Hacker News 
 
 Let's work in our fastify-web-server folder from where we left off in the "Using Templates with Fastify" section.
 
+```sh
+npm install hn-latest-stream
+```
+
+Now we'll create a new routes folder called routes/articles and add an index.js file to it:
+
+```sh
+cd routes
+node -e "fs.mkdirSync('articles')"
+cd articles
+node -e "fs.openSync('index.js', 'w')"
+cd ..
+cd ..
+```
+
+The contents of routes/articles/index.js should be as follows:
+
+```sh
+'use strict'
+
+const hnLatestStream = require('hn-latest-stream')
+
+module.exports = async (fastify, opts) => {
+  fastify.get('/', async (request, reply) => {
+    const { amount = 10, type = 'html' } = request.query
+
+    if (type === 'html') reply.type('text/html')
+    if (type === 'json') reply.type('application/json')
+    return hnLatestStream(amount, type)
+  })
+}
+```
+
+The hnLatestStream function accepts two parameters, amount and type and then returns a Node.js Stream. The amount is the number of most recent Hacker News articles we want to load and the type describes whether the stream should send HTML chunks or JSON chunks. In our route handler, we set a default amount of 10 and a default type of `'html'` while also allowing these to be overridden by a query string arguments. Depending on the desired type we also use the reply.type method to set the correct Content-Type HTTP header for the content.
+
+Returning the stream (the result of calling hnLatestStream) from the route handler instructs Fastify to safely pipe the stream to the response. The reply.send method can also be passed a stream and Fastify behaves in the same way - by piping the stream as the HTTP response.
+
+Let's see it in action. First we need to start the server with the following command:
+
+```sh
+npm run dev
+```
+
+Next we can navigate to ht‌tp://localhost:3000/articles and we should see output similar to but not the same as, the following:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/serving-web-content/imgs/content-7.png" width="1000" />
+  <br />
+</p>
+
+This will load different articles each time and there should be ten articles in total. The hn-latest-stream module uses the Hacker News API to fetch the content. It has to first lookup the latest story IDs and then for each ID it has to make a separate HTTP request to fetch the article and then push either JSON or HTML content to the stream that it returns. As such, it should be easy to observe the content being parsed and rendered by the browser incrementally in that there's a visible delay between each article rendering in the browser. This shows the power of streams in action for long running tasks. The server hasn't retrieved all the data yet, but we can still fill the above-the-fold (the part of the page that's first seen when a page loads) with the latest articles while more articles continue to load on the server, and then sent to the client to be displayed beneath the fold.
+
+Let's try out the query string parameters as well. In the browser let's try navigating to the URL: http://localhost:3000/articles?type=json&amount=250. This will load the JSON data for the latest 250 Hacker News stories. We should again be able to observe short delays between each JSON object being received by the browser. When navigating to this URL we should see something similar to the following, but with different content:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/serving-web-content/imgs/content-8.png" width="1000" />
+  <br />
+</p>
+
+In the next chapter, we'll look at creating JSON services in more detail, this section was more to illustrate how streams can be a useful tool in constrained scenarios and how to use streams with the Fastify framework.
+
+One final note about error handling before wrapping up. Due to Fastify handling the stream for us, any errors in the stream will be handled and propagated. If we disconnect from the Internet and then attempt to access http://localhost:3000/articles, we'll see something like the following:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/serving-web-content/imgs/content-9.png" width="1000" />
+  <br />
+</p>
+
+We caused an error in the stream, which Fastify then handled and responded to our request with a 500 status code along with information about the error.
+
+In the next and final section, we'll discuss how to use streams with Express, which will require more glue around error handling.
+
+Node.js Streams is a large topic. A chapter is dedicated to streams in the course for the companion certification to Node.js Services Development - the Node.js Application Development (LFW211) course.
+
