@@ -25,7 +25,7 @@ It's important to ensure that this command is executed within the `fastify-web-s
 This command should produce output similar to the following:
 
 <p align="center">
-  <img src="https://github.com/jsricarde/jsnsd-labs/raw/master/creating-a-web-server/imgs/server-1.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/creating-a-web-server/imgs/server-1.png" width="1000" />
   <br />
 </p>
 
@@ -120,7 +120,7 @@ This should display something like the following:
 
 
 <p align="center">
-  <img src="https://github.com/jsricarde/jsnsd-labs/raw/master/creating-a-web-server/imgs/server-2.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/creating-a-web-server/imgs/server-2.png" width="1000" />
   <br />
 </p>
 
@@ -129,7 +129,7 @@ We shouldn't need to start and stop the server as we make changes, that will hap
 We can check the server is running correctly by navigating to http://localhost:3000 in the browser. We should see something like the following:
 
 <p align="center">
-  <img src="https://github.com/jsricarde/jsnsd-labs/raw/master/creating-a-web-server/imgs/server-3.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/creating-a-web-server/imgs/server-3.png" width="1000" />
   <br />
 </p>
 
@@ -211,7 +211,7 @@ We've added the now familiar `root` string of HTML as a constant to the `routes/
 If we now navigate in the browser to http://localhost:3000 we should see the following:
 
 <p align="center">
-  <img src="https://github.com/jsricarde/jsnsd-labs/raw/master/creating-a-web-server/imgs/server-4.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/creating-a-web-server/imgs/server-4.png" width="1000" />
   <br />
 </p>
 
@@ -233,7 +233,7 @@ This code is very similar to the original `routes/root.js` route. Again, we have
 Let's navigate to http://localhost:3000/example in the browser:
 
 <p align="center">
-  <img src="https://github.com/jsricarde/jsnsd-labs/raw/master/creating-a-web-server/imgs/server-5.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/creating-a-web-server/imgs/server-5.png" width="1000" />
   <br />
 </p>
 
@@ -250,7 +250,7 @@ cd ..
 Attempting to load http://localhost:3000/example in the browser will now result in the following:
 
 <p align="center">
-  <img src="https://github.com/jsricarde/jsnsd-labs/raw/master/creating-a-web-server/imgs/server-6.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/creating-a-web-server/imgs/server-6.png" width="1000" />
   <br />
 </p>
 
@@ -259,7 +259,7 @@ This is the default Fastify 404 handling behavior. We'll modify this later to al
 However, if we navigate to http://localhost:3000/hello, we should see the following:
 
 <p align="center">
-  <img src="https://github.com/jsricarde/jsnsd-labs/raw/master/creating-a-web-server/imgs/server-7.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/creating-a-web-server/imgs/server-7.png" width="1000" />
   <br />
 </p>
 
@@ -293,7 +293,7 @@ Again, we see the familiar hello constant, which is returned from the route hand
 If we now navigate to http://localhost:3000/hello we should see the following:
 
 <p align="center">
-  <img src="https://github.com/jsricarde/jsnsd-labs/raw/master/creating-a-web-server/imgs/server-8.png" width="1000" />
+  <img src="https://raw.githubusercontent.com/jsricarde/jsnsd-labs/main/creating-a-web-server/imgs/server-8.png" width="1000" />
   <br />
 </p>
 
