@@ -32,6 +32,6 @@
 [Fastify]: <https://github.com/jsricarde/jsnsd-labs/tree/master/Creating-a-Web-Server#Fastify>
 [Express]: <https://github.com/jsricarde/jsnsd-labs/tree/master/Creating-a-Web-Server#Express>
 
-[Serving Web Content]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Serving-Web-Content>
-[Static Content With Fastify]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Serving-Web-Content#Static-Content-With-Fastify>
-[Streaming Content with Fastify]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Serving-Web-Content#Streaming-Content-with-Fastify>
+[Serving Web Content]: <https://github.com/jsricarde/jsnsd-labs/tree/main/serving-web-content>
+[Static Content With Fastify]: <https://github.com/jsricarde/jsnsd-labs/tree/main/serving-web-content#Static-Content-With-Fastify>
+[Streaming Content with Fastify]: <https://github.com/jsricarde/jsnsd-labs/tree/main/serving-web-content#Streaming-Content-with-Fastify>
