@@ -25,6 +25,9 @@
 * [Serving Web Content]
   * [Static Content With Fastify]
   * [Streaming Content with Fastify]
+* [Creating Restful JSON Services]
+  * [Creating Restful JSON Services with Fastify]
+
 
 
 [Creating a Web Server]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Creating-a-Web-Server>
@@ -35,3 +38,6 @@
 [Serving Web Content]: <https://github.com/jsricarde/jsnsd-labs/tree/main/serving-web-content>
 [Static Content With Fastify]: <https://github.com/jsricarde/jsnsd-labs/tree/main/serving-web-content#Static-Content-With-Fastify>
 [Streaming Content with Fastify]: <https://github.com/jsricarde/jsnsd-labs/tree/main/serving-web-content#Streaming-Content-with-Fastify>
+
+[Creating Restful JSON Services]: <https://github.com/jsricarde/jsnsd-labs/tree/main/creating-restful-json-services>
+[Creating Restful JSON Services]: <https://github.com/jsricarde/jsnsd-labs/tree/main/creating-restful-json-services#Creating-Restful-JSON-Services-with Fastify>
