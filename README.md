@@ -24,8 +24,7 @@
   * [Express]
 * [Serving Web Content]
   * [Static Content With Fastify]
-* [Serving Web Content]
-  * [Static Content With Fastify]
+  * [Streaming Content with Fastify]
 
 
 [Creating a Web Server]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Creating-a-Web-Server>
@@ -35,3 +34,4 @@
 
 [Serving Web Content]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Serving-Web-Content>
 [Static Content With Fastify]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Serving-Web-Content#Static-Content-With-Fastify>
+[Streaming Content with Fastify]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Serving-Web-Content#Streaming-Content-with-Fastify>
