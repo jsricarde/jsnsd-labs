@@ -1,0 +1,30 @@
+{
+  "name": "fastify-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap test/**/*.test.js",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.0.0",
+    "fastify-autoload": "^3.0.2",
+    "fastify-cli": "^2.6.0",
+    "fastify-plugin": "^3.0.0",
+    "handlebars": "^4.7.6",
+    "hn-latest-stream": "^1.0.2",
+    "point-of-view": "^4.7.0"
+  },
+  "devDependencies": {
+    "fastify-static": "^3.3.0",
+    "tap": "^14.0.0"
+  }
+}

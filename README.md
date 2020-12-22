@@ -18,10 +18,14 @@
 
 ## Content
 
-* [Creating a Web Server] 7%
+* [Creating a Web Server]
   * [Core Module]
   * [Fastify]
   * [Express]
+* [Serving Web Content]
+  * [Static Content With Fastify]
+* [Serving Web Content]
+  * [Static Content With Fastify]
 
 
 [Creating a Web Server]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Creating-a-Web-Server>
@@ -29,3 +33,5 @@
 [Fastify]: <https://github.com/jsricarde/jsnsd-labs/tree/master/Creating-a-Web-Server#Fastify>
 [Express]: <https://github.com/jsricarde/jsnsd-labs/tree/master/Creating-a-Web-Server#Express>
 
+[Serving Web Content]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Serving-Web-Content>
+[Static Content With Fastify]: <http://github.com/jsricarde/jsnsd-labs/tree/master/Serving-Web-Content#Static-Content-With-Fastify>
